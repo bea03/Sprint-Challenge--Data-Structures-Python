@@ -36,15 +36,7 @@ class RingBuffer:
         self.storage = DoublyLinkedList()
 
     def append(self, item):
-        if self.capacity <= 0:
-            return
-        elif len(self.storage) == self.capacity:
-            if not self.current:
-                self.current = self.storage.tail
-            self.current.value = item
-            self.current = self.current.prev
-        else:
-            self.storage.add_to_head(item)
+        pass 
 
     def get(self):
         # Note:  This is the only [] allowed
